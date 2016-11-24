@@ -1,0 +1,5 @@
+*.egg
+*.egg-info/
+.tox/
+__pycache__/
+pytest*.xml
