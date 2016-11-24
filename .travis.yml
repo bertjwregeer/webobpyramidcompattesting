@@ -1,0 +1,20 @@
+# Wire up travis
+language: python
+sudo: false
+
+matrix:
+    include:
+        - python: 2.7
+        - python: 3.3
+        - python: 3.4
+        - python: 3.5
+        - python: 3.6-dev
+        - python: nightly
+        - python: pypy
+
+install:
+  - travis_retry pip install tox-travis
+
+script:
+  - travis_retry tox
+
